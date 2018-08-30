@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo_quizz.css">
+    <title>Reprograma</title>
+  </head>
+
+  <body>
+    <h1>QUIZZ</h1>
+    <p>As 03 perguntas são:</p>
+    <br/>
+    <form>
+      1. O que significa a sigla HTML?
+      <div class="container">
+        <input type="radio" name="QUIZ" value="A"/>A. Hyperlinks and Text Markup Language<br/>
+        <input type="radio" name="QUIZ" value="B"/>B. Hyper Text Markup Language<br/>
+        <input type="radio" name="QUIZ" value="C"/>C. Home Tool Markup Language<br/>
+      </div>
+      <br/>
+
+      <p>2. O que significa a sigla CSS?</p>
+      <div class="container">
+        <input type="radio" name="QUIZ1" value="A">A. Creative Style Sheets<br/>
+        <input type="radio" name="QUIZ1" value="B">B. Cascading Style Sheets<br/>
+        <input type="radio" name="QUIZ1" value="C">C. Colorful Style Sheets<br/>
+      </div>
+      <br/>
+
+      <p>3. Dentro de qual elemento HTML nós colocamos o JavaScript?</p>
+      <div class="container">
+        <input type="radio" name="QUIZ2" value="A">A. script<br/>
+        <input type="radio" name="QUIZ2" value="B">B. js<br/>
+        <input type="radio" name="QUIZ2" value="C">C. javascript<br/>
+      </div>
+      <br/>
+
+      <div class="resultado">
+        <strong>PARA VOCÊ SABER QUANTOS PONTOS VOCÊ ACERTOU, CLICK NO BOTÃO</strong>
+        <br/>
+      </div>
+      <br/>
+
+      <div class="botão">
+        <input type="button" onclick="funcao1()" value="RESULTADO" />
+      </div>
+    </form>
+
+    <script type="text/javascript">
+
+    var meuFormulario = document.querySelector("form")
+
+    function funcao1() {
+      var respostaPergunta1 = meuFormulario.elements["QUIZ"].value
+      var respostaPergunta2 = meuFormulario.elements["QUIZ1"].value
+      var respostaPergunta3 = meuFormulario.elements["QUIZ2"].value
+      var pontuacao = 0
+
+      if (respostaPergunta1 == "B") {
+        pontuacao = pontuacao + 1
+      } else {
+        pontuacao = pontuacao + 0
+      }
+
+      if (respostaPergunta2 == "B") {
+        pontuacao = pontuacao + 1
+      } else {
+        pontuacao = pontuacao + 0
+      }
+
+      if (respostaPergunta3 == "A") {
+        pontuacao = pontuacao + 1
+      } else {
+        pontuacao = pontuacao + 0
+      }
+
+      alert("Sua pontuação é " + pontuacao)
+    }
+    </script>
+
+  </body>
+</html>

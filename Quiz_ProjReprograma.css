@@ -1,0 +1,30 @@
+h1{
+
+  text-align: center;
+}
+
+body{
+  font-family:  monospace;
+  font-size: 17px;
+  
+
+}
+
+.resultado{
+  text-align: center;
+  text-decoration: inherit;
+
+
+}
+
+.botão{
+    position:relative;
+    top: : 700px;
+    left: 600px;
+}
+
+
+alert{
+  text-align: center;
+  
+}
